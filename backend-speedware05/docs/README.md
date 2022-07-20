@@ -1,6 +1,10 @@
 # Backend Speedware - Grupo05 🦅
 
+⚠️ BACKEND - !COLOCAR SEU APPTOKEN E APPKEY!
+
 ### Como utilizar:
+
+⚠️ - Colocar App Key e App Token em /speedware-backend05/node/clients/vtexCommerce.ts
 
 ```
 # Comandos
