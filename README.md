@@ -1,5 +1,6 @@
 # HiringCoders-speedware05
 
+WS: https://speedware05--speedware.myvtex.com/
 ### ⚠️ BACKEND - !COLOCAR SEU APPTOKEN E APPKEY!
 
 # Hiring Coders Fase 03!!
