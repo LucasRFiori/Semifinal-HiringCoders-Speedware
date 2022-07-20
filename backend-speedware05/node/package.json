@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2",
+    "co-body": "^6.0.0",
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "@types/co-body": "^0.0.3",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.0.0",
+    "@types/ramda": "types/npm-ramda#dist",
+    "@vtex/api": "6.45.12",
+    "@vtex/test-tools": "^1.0.0",
+    "@vtex/tsconfig": "^0.5.6",
+    "speedware.speedware5-backend": "https://speedware05--speedware.myvtex.com/_v/private/typings/linked/v1/speedware.speedware5-backend@0.2.0+build1658329836/public/_types/react",
+    "typescript": "3.9.7",
+    "vtex.store-graphql": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.152.2/public/@types/vtex.store-graphql"
+  },
+  "scripts": {
+    "lint": "tsc --noEmit --pretty"
+  },
+  "version": "0.2.0"
+}
