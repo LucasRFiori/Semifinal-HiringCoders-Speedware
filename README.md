@@ -1,57 +1,58 @@
+
 # HiringCoders-speedware05
 
 WS: https://speedware05--speedware.myvtex.com/
-### ⚠️ BACKEND - !COLOCAR SEU APPTOKEN E APPKEY!
 
-# Hiring Coders Fase 03!!
+### ⚠️ BACKEND - !INSERT YOUR APPTOKEN AND APPKEY!
+
+# Hiring Coders Phase 03!!
 
 ![logo-hiring-coders](https://github.com/diosneygomes/desafio-final-gama-academy-vtex/blob/main/logo-hiring-coders.png)
 
 ![logo-hiring-coders](https://github.com/devlobao84/front-speedeware05/blob/main/SPEED.png)
 
-# :desktop_computer: Desafio Final - Grupo 05 :trophy:
+# :desktop_computer: Final Challenge - Group 05 :trophy:
 
-Este repositório contém o conteúdo referente ao último desafio do programa <a href="https://www.hiringcoders.com.br/">Hiring coders</a>.
-Nele você encontrará todos os detalhes sobre a construção do projeto final feito pelo **Grupo 05**
+This repository contains the content related to the last challenge of the program <a href="https://www.hiringcoders.com.br/">Hiring Coders</a>.
+Here you will find all the details about the construction of the final project done by **Group 05**.
 
-# :notebook: Índice
+# :notebook: Index
 
-<a name="ancora"></a>
-:pushpin: - [Descrição do desafio](#ancora1)
+<a name="anchor"></a>
+:pushpin: - [Challenge Description](#anchor1)
 
-:pushpin: - [Sobre o projeto](#ancora2)
+:pushpin: - [About the Project](#anchor2)
 
-:pushpin: - [Links para os projetos](#ancora3)
+:pushpin: - [Links to the Projects](#anchor3)
 
-:pushpin: - [Equipe](#ancora4)
+:pushpin: - [Team](#anchor4)
 
+<a id="anchor4"></a>
+# :1st_place_medal: Team
 
-<a id="ancora4"></a>
-# :1st_place_medal: Equipe
+:pouting_man: Lobão - | <a href="https://www.linkedin.com/in/jonaslobo/">LinkedIn</a> | <a href ="https://github.com/devlobao84">GitHub</a> |
 
-:pouting_man: Lobão - | <a href="https://www.linkedin.com/in/jonaslobo/">Linkedin</a> | <a href ="https://github.com/devlobao84">Github</a> |
+:pouting_man: Lucas Fiori - | <a href="https://www.linkedin.com/in/lucas-rodrigues-fiori-763326196/">LinkedIn</a> | <a href ="https://github.com/lucasrfiori">GitHub</a> |
 
-:pouting_man: Lucas Fiori - | <a href="https://www.linkedin.com/in/lucas-rodrigues-fiori-763326196/">Linkedin</a> | <a href ="https://github.com/lucasrfiori">Github</a> |
+:pouting_man: Victor Dandolini - | <a href="https://www.linkedin.com/in/victordandolini/">LinkedIn</a> | <a href ="https://github.com/victordandolini">GitHub</a> |
 
-:pouting_man: Victor Dandolini - | <a href="https://www.linkedin.com/in/victordandolini/">Linkedin</a> | <a href ="https://github.com/victordandolini">Github</a> |
+# Backend Speedware - Group 05 🦅
 
-# Backend Speedware - Grupo05 🦅
-
-### Como utilizar:
-⚠️ - Colocar App Key e App Token em /speedware-backend05/node/clients/vtexCommerce.ts
-
-```
-# Comandos
-
-vtex setup - instalar dependências
-vtex use {{ workspace }} - utilizar no seu workspace
-vtex link - vincular esse app ao seu workspace
-```
-
-## Apis disponíveis:
+### How to Use:
+⚠️ - Insert App Key and App Token in /speedware-backend05/node/clients/vtexCommerce.ts
 
 ```
-# Rotas
+# Commands
+
+vtex setup - install dependencies
+vtex use {{ workspace }} - use in your workspace
+vtex link - link this app to your workspace
+```
+
+## Available APIs:
+
+```
+# Routes
 
 https://{{ workspace }}--{{ account }}.myvtex.com/orderHookEndPoint
 https://{{ workspace }}--{{ account }}.myvtex.com/getTotalPoints
@@ -59,19 +60,18 @@ https://{{ workspace }}--{{ account }}.myvtex.com/removePoints
 
 ```
 
-## Documentação das Api's
+## API Documentation
 
 - #### orderHookEndPoint
-Alimentado pela vtex, porém caso queira inserir um valor manualmente
-basta passar o orderid do pedido
+Powered by VTEX, but if you want to insert a value manually, just pass the orderId of the order.
 
 ```
-# Exemplo request body
+# Example request body
 {
   "OrderId": "1247981552231-01"
 }
 
-# Exemplo response body 
+# Example response body 
 {
     "user": "fulaninho@gmail.com",
     "prevPointsBalance": 8725,
@@ -81,16 +81,15 @@ basta passar o orderid do pedido
 
 - #### getTotalPoints
 
-Essa rota tem como objetivo retornar o total de pontos de um usuário
-de acordo com seu email.
+This route aims to return the total points of a user according to their email.
 
 ```
-# Exemplo request body
+# Example request body
 {
     "userEmail": "fulaninho@gmail.com"
 }
 
-# Exemplo response body 
+# Example response body 
 
 {
     "id": "eacac18a-07b0-11ed-124d-0e6dcc45d76d",
@@ -101,31 +100,29 @@ de acordo com seu email.
 
 - #### removePoints
 
-Essa rota tem como objetivo descontar os pontos de um usuário de acordo com seu email,
-e retornar o saldo após o desconto ter sido finalizado.
+This route aims to deduct points from a user according to their email and return the balance after the deduction has been completed.
 
 ```
-# Exemplo request body
+# Example request body
 
 {
   "targetUser": "fulaninho@gmail.com",
   "valueToDiscount": 144
 }
 
-# Exemplo response body 
+# Example response body 
 
 {
   "user": "fulaninho@gmail.com",
-  "oldPoinsBalance": 1400,
+  "oldPointsBalance": 1400,
   "newPointsBalance": 1296
 }
-
 ```
 
-## Mais informações
+## More Information
 
 | Routes            | Method | Params                     | Type                                    |
 |-------------------|--------|----------------------------|-----------------------------------------|
 | orderHookEndPoint | POST   | OrderId                    | string                                  |
-| getTotalPoints    | POST   | userEmail                  | string -Obs tem que ser um email válido |
+| getTotalPoints    | POST   | userEmail                  | string - Note: must be a valid email   |
 | removePoints      | POST   | targetUser</br> valueToDiscount | string</br> number                           |
